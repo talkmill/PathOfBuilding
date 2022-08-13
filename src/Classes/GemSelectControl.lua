@@ -672,6 +672,9 @@ function GemSelectClass:OnFocusLost()
 		if self.noMatches then
 			self:SetText("")
 		end
+		self:BuildList("")
+		self.buf = self.initialBuf
+		self.selIndex = self.initialIndex
 		self:UpdateGem(true, true)
 	end
 end
